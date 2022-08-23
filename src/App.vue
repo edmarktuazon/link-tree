@@ -5,13 +5,6 @@ import WelcomeItem from "./components/WelcomeItem.vue";
 </script>
 
 <template>
-  <WelcomeItem
-    name="Edmark Tuazon"
-    github="github"
-    portfolio="portfolio"
-    facebook="facebook"
-    instagram="instagram"
-    email="email"
-  />
+  <WelcomeItem />
 </template>
 

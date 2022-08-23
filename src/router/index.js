@@ -28,6 +28,14 @@ const router = createRouter({
 			},
 		},
 		{
+			path: "/linkedin",
+			name: "linkedin",
+			component: () => {
+				window.location.href = "https://www.linkedin.com/in/edmarktuazon/";
+				return null;
+			},
+		},
+		{
 			path: "/facebook",
 			name: "facebook",
 			component: () => {

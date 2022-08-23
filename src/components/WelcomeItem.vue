@@ -1,14 +1,20 @@
 <script setup>
 import Audio from "../assets/images/bg-music-loop.wav";
 import EdmarkImage from "../assets/images/edmark-img.jpg";
-defineProps({
-  name: String,
-  github: String,
-  portfolio: String,
-  facebook: String,
-  instagram: String,
-  email: String,
+
+import { reactive, toRefs } from "vue";
+
+const links = reactive({
+  name: "Edmark Tuazon",
+  github: "github",
+  portfolio: "portfolio",
+  linkedin: "linkedin",
+  facebook: "facebook",
+  instagram: "instagram",
+  email: "email",
 });
+const { name, github, portfolio, facebook, linkedin, instagram, email } =
+  toRefs(links);
 </script>
 <!-- https://cdn-animation.artstation.com/p/video_sources/000/445/143/cassatte-animasao.mp4 -->
 <!-- https://cdn-animation.artstation.com/p/video_sources/000/569/664/abbiefinal.mp4 -->
@@ -51,7 +57,8 @@ defineProps({
             {{ name }}
           </figcaption>
         </figure>
-        <div class="mt-12 mb-12 flex flex-col">
+        <!-- links -->
+        <div class="mt-8 mb-12 flex flex-col">
           <RouterLink
             to="/github"
             class="
@@ -64,7 +71,7 @@ defineProps({
               rounded-full
               capitalize
               w-full
-              min-w-[80vw]
+              min-w-[90vw]
               md:w-full md:min-w-[60vw]
               lg:w-full lg:min-w-[30vw]
             "
@@ -89,6 +96,25 @@ defineProps({
             "
           >
             {{ portfolio }}
+          </RouterLink>
+          <RouterLink
+            to="/linkedin"
+            class="
+              text-black
+              decoration-0
+              bg-[#ffffffd0]
+              mt-5
+              p-5
+              text-center
+              rounded-full
+              capitalize
+              w-full
+              min-w-[80vw]
+              md:w-full md:min-w-[60vw]
+              lg:w-full lg:min-w-[30vw]
+            "
+          >
+            {{ linkedin }}
           </RouterLink>
           <RouterLink
             to="/facebook"
