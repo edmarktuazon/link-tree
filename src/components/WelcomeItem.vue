@@ -1,5 +1,4 @@
 <script setup>
-import Audio from "../assets/images/bg-music-loop.wav";
 import EdmarkImage from "../assets/images/edmark-img.jpg";
 
 import { reactive, toRefs } from "vue";
@@ -13,14 +12,20 @@ const links = reactive({
   instagram: "instagram",
   email: "email",
 });
+
 const { name, github, portfolio, facebook, linkedin, instagram, email } =
   toRefs(links);
+
+const load = () => {
+  const content = document.querySelector("#content");
+  setTimeout(() => {
+    content.classList.add("loaded");
+  }, 1000);
+};
+window.addEventListener("load", load);
 </script>
-<!-- https://cdn-animation.artstation.com/p/video_sources/000/445/143/cassatte-animasao.mp4 -->
-<!-- https://cdn-animation.artstation.com/p/video_sources/000/569/664/abbiefinal.mp4 -->
 <template>
-  <section class="h-[100vh] overflow-hidden relative">
-    <audio :src="Audio" autoplay loop></audio>
+  <section class="min-h-[100vh] relative">
     <video
       autoplay
       loop
@@ -32,7 +37,7 @@ const { name, github, portfolio, facebook, linkedin, instagram, email } =
         type="video/mp4"
       />
     </video>
-    <div class="h-[100vh] grid place-items-center">
+    <div class="grid place-items-center" id="content">
       <div class="grid place-items-center">
         <figure class="grid place-items-center mt-12">
           <img
@@ -58,7 +63,7 @@ const { name, github, portfolio, facebook, linkedin, instagram, email } =
           </figcaption>
         </figure>
         <!-- links -->
-        <div class="mt-8 mb-12 flex flex-col">
+        <div class="mt-8 mb-8 flex flex-col">
           <RouterLink
             to="/github"
             class="
@@ -66,7 +71,7 @@ const { name, github, portfolio, facebook, linkedin, instagram, email } =
               decoration-0
               bg-[#ffffffd0]
               mt-5
-              p-5
+              p-4
               text-center
               rounded-full
               capitalize
@@ -85,7 +90,7 @@ const { name, github, portfolio, facebook, linkedin, instagram, email } =
               decoration-0
               bg-[#ffffffd0]
               mt-5
-              p-5
+              p-4
               text-center
               rounded-full
               capitalize
@@ -104,7 +109,7 @@ const { name, github, portfolio, facebook, linkedin, instagram, email } =
               decoration-0
               bg-[#ffffffd0]
               mt-5
-              p-5
+              p-4
               text-center
               rounded-full
               capitalize
@@ -123,7 +128,7 @@ const { name, github, portfolio, facebook, linkedin, instagram, email } =
               decoration-0
               bg-[#ffffffd0]
               mt-5
-              p-5
+              p-4
               text-center
               rounded-full
               capitalize
@@ -142,7 +147,7 @@ const { name, github, portfolio, facebook, linkedin, instagram, email } =
               decoration-0
               bg-[#ffffffd0]
               mt-5
-              p-5
+              p-4
               text-center
               rounded-full
               capitalize
@@ -161,7 +166,7 @@ const { name, github, portfolio, facebook, linkedin, instagram, email } =
               decoration-0
               bg-[#ffffffd0]
               mt-5
-              p-5
+              p-4
               text-center
               rounded-full
               capitalize
