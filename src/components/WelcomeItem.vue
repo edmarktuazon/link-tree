@@ -7,7 +7,7 @@ const links = reactive({
   name: "Edmark Tuazon",
   github: "github",
   portfolio: "portfolio",
-  linkedin: "linkedin",
+  linkedin: "linkedIn",
   facebook: "facebook",
   instagram: "instagram",
   email: "email",
