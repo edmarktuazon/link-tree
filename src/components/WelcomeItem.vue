@@ -6,7 +6,7 @@ import { reactive, toRefs } from "vue";
 const links = reactive({
   name: "Edmark Tuazon",
   github: "github",
-  portfolio: "portfolio",
+  portfolio: "website portfolio",
   linkedin: "linkedIn",
   facebook: "facebook",
   instagram: "instagram",
