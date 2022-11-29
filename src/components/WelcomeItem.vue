@@ -1,5 +1,5 @@
 <script setup>
-import EdmarkImage from "../assets/images/edmark-img.jpg";
+import primaryImg from "../assets/images/edmark-img.jpg";
 
 import { reactive, toRefs } from "vue";
 
@@ -25,7 +25,7 @@ const load = () => {
 window.addEventListener("load", load);
 </script>
 <template>
-  <section class="min-h-[100vh] grid place-items-center">
+  <section class="min-h-[100vh] grid place-items-center" v-cloak>
     <video
       autoplay
       loop
@@ -40,7 +40,7 @@ window.addEventListener("load", load);
     <div class="grid place-items-center" id="content">
       <figure class="grid place-items-center">
         <img
-          :src="EdmarkImage"
+          :src="primaryImg"
           alt="Edmark Image"
           class="border border-1 border-white rounded-full p-2"
         />

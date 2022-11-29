@@ -11,6 +11,10 @@
 	font-family: "Roboto Mono", monospace;
 }
 
+[v-cloak] {
+	display: none;
+}
+
 #content {
 	opacity: 0;
 }
