@@ -25,7 +25,7 @@ const load = () => {
 window.addEventListener("load", load);
 </script>
 <template>
-  <section class="min-h-[100vh] grid place-items-center" v-cloak>
+  <section class="h-screen grid place-items-center" v-cloak>
     <video
       autoplay
       loop
