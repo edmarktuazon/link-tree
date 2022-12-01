@@ -1,5 +1,6 @@
 <script setup>
 import primaryImg from "../assets/images/edmark-img.jpg";
+import vidBanner from "../assets/live-banner-bg.mp4";
 
 import { reactive, toRefs } from "vue";
 
@@ -29,14 +30,10 @@ window.addEventListener("load", load);
     <video
       autoplay
       loop
+      muted
       class="absolute inset-0 w-full h-full z-[-1] object-cover"
     >
-      <source
-        src="https://cdn-animation.artstation.com/p/video_sources/000/677/693/live-wallpaper-1.mp4"
-        type="video/mp4"
-        autoplay
-        loop
-      />
+      <source :src="vidBanner" type="video/mp4" />
     </video>
     <div class="grid place-items-center" id="content">
       <figure class="grid place-items-center">
