@@ -29,11 +29,13 @@ window.addEventListener("load", load);
     <video
       autoplay
       loop
-      class="absolute top-0 left-0 w-full h-full z-[-1] object-cover"
+      class="absolute inset-0 w-full h-full z-[-1] object-cover"
     >
       <source
         src="https://cdn-animation.artstation.com/p/video_sources/000/677/693/live-wallpaper-1.mp4"
         type="video/mp4"
+        autoplay
+        loop
       />
     </video>
     <div class="grid place-items-center" id="content">
