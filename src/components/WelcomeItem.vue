@@ -29,7 +29,6 @@ window.addEventListener("load", load);
     <video
       autoplay
       loop
-      muted
       class="absolute top-0 left-0 w-full h-full z-[-1] object-cover"
     >
       <source
