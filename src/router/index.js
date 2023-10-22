@@ -23,7 +23,7 @@ const router = createRouter({
 			path: "/portfolio",
 			name: "portfolio",
 			component: () => {
-				window.location.href = "https://edmarktuazon.herokuapp.com/";
+				window.location.href = "https://edmarktuazon.onrender.com/";
 				return null;
 			},
 		},
